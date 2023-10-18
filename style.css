@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 600px;
+    background: url(img/background.jpg) center/cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.game__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.game__button {
+    width: 100px;
+    height: 60px;
+    background-color: rgba(45, 139, 255, 0.265);
+    border: none;
+    font-size: 34px;
+    border-radius: 10px;
+    color: white;
+    transition: transform 300ms ease-in;
+}
+
+.game__button:hover {
+    transform: scale(1.1);
+}
+
+.game__timer {
+    margin-left: 650px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border: none;
+    font-size: 32px;
+    margin-top: 8px;
+    border-radius: 10px;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.game__score {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    font-size: 33px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(96, 144, 255);
+    color: white;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+}
+
+.game__field {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    /* background-color: rgba(255, 127, 227, 0.505); */
+}
+
+.pop-up {
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    height: 200px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.598);
+    color: white;
+    transform: translateY(-150%);
+    border-radius: 20px;
+}
+
+.pop-up--hide {
+    display: none;
+}
+
+.pop-up__refresh {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    background-color: rgba(255, 255, 255, 0.792);
+    border: none;
+    border-radius: 50%;
+    color: rgb(28, 100, 255);
+    transition: transform 300ms ease-in;
+}
+
+.pop-up__refresh:hover {
+    transform: scale(1.1) rotate(-30deg);
+}
+
+.pop-up__message {
+    display: block;
+    font-size: 38px;
+}
+
+.whale,
+.jelly {
+    transition: 100ms transform ease-in;
+}
+
+.whale:hover,
+.jelly:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.img_src {
+    display: block;
+    margin-top: 20px;
+    color: gray;
+}
