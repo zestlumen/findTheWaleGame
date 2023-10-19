@@ -1,4 +1,6 @@
 # findTheWaleGame
+### 바로가기 https://findthewhalegame.netlify.app/
+- netlify로 배포
 - HTML/CSS/JS로 만든 고래 찾기 게임
 - 정해진 시간 안에 바닷속에 있는 고래를 빠르게 클릭하는 게임
  
