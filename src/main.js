@@ -31,6 +31,10 @@ game.setGameStopListener(reason => {
             throw new Error('not valid reason');
     }
     gameFinishBanner.showWithText(message);
+    const elements = document.querySelectorAll('.whale,.jelly');
+    elements.forEach(element=>{
+        element.classList.add('disabled');
+    });
 })
 
 gameFinishBanner.setClickListener(() => {

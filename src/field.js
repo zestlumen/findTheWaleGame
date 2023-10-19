@@ -3,7 +3,7 @@
 import * as sound from './sound.js';
 
 const WHALE_WIDTH = 200;
-const WHALE_HEIGHT = 112;
+const WHALE_HEIGHT = 200;
 
 export const itemType = Object.freeze({
     whale: 'whale',
@@ -16,9 +16,12 @@ export class Field {
         this.jellyCount = jellyCount;
         this.field = document.querySelector('.game__field');
         this.fieldRect = this.field.getBoundingClientRect();
+        // this.onClick = this.onClick.bind(this); 1.직접적인 바인딩
+        // this.field.addEventListener('click', (event)=>this.onClick(event));
+        // 2.이벤트 받아서 전달해서 바인딩
         this.field.addEventListener('click', this.onClick);
-        //함수를 인자로 전달시에 클래스정보는 함께 전달되지 X
-        //JS에서는 함수만 전달되어짐-> ★함수를 클래스와 바인딩해줘야함
+        //★ 함수를 인자로 전달시에 클래스정보는 함께 전달되지 X
+        //JS에서는 함수만 전달되어짐->함수를 클래스와 바인딩해줘야함
     }
 
     init() {
@@ -49,9 +52,9 @@ export class Field {
             this.field.appendChild(item);
         }
     }
-
-    onClick = event => {
-        const target = event.target;
+    //3.다른 콜백으로 전달할 때 온클릭이라는 멤버변수가 arrowfunction을 가리킴
+    onClick = (e) => {
+        const target = e.target;
         if (target.matches('.whale')) {
             target.remove();
             sound.playWhale();
